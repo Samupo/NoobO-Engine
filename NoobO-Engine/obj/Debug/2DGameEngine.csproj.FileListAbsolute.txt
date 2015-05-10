@@ -1,0 +1,8 @@
+D:\Universidad\2DGameEngine\2DGameEngine\bin\Debug\2DGameEngine.exe.config
+D:\Universidad\2DGameEngine\2DGameEngine\obj\Debug\2DGameEngine.csprojResolveAssemblyReference.cache
+D:\Universidad\2DGameEngine\2DGameEngine\bin\Debug\2DGameEngine.exe
+D:\Universidad\2DGameEngine\2DGameEngine\bin\Debug\2DGameEngine.pdb
+D:\Universidad\2DGameEngine\2DGameEngine\obj\Debug\2DGameEngine.exe
+D:\Universidad\2DGameEngine\2DGameEngine\obj\Debug\2DGameEngine.pdb
+D:\Universidad\2DGameEngine\2DGameEngine\obj\Debug\2DGameEngine.csproj.GenerateResource.Cache
+D:\Universidad\2DGameEngine\2DGameEngine\obj\Debug\_2DGameEngine.Editor.EditorForm.resources

@@ -1,0 +1,7 @@
+D:\Universidad\2DGameEngine\2DGameEngine\bin\PC\2DGameEngine.exe.config
+D:\Universidad\2DGameEngine\2DGameEngine\obj\PC\_2DGameEngine.Editor.EditorForm.resources
+D:\Universidad\2DGameEngine\2DGameEngine\obj\PC\2DGameEngine.csproj.GenerateResource.Cache
+D:\Universidad\2DGameEngine\2DGameEngine\bin\PC\2DGameEngine.exe
+D:\Universidad\2DGameEngine\2DGameEngine\bin\PC\2DGameEngine.pdb
+D:\Universidad\2DGameEngine\2DGameEngine\obj\PC\2DGameEngine.exe
+D:\Universidad\2DGameEngine\2DGameEngine\obj\PC\2DGameEngine.pdb
