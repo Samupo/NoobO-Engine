@@ -39,8 +39,16 @@ using System.Threading.Tasks;
 
 namespace _2DGameEngine
 {
+    /// <summary>
+    /// Inefficient math class with floats
+    /// </summary>
     public abstract class Mathf
     {
+        /// <summary>
+        /// Inefficient Square Root
+        /// </summary>
+        /// <param name="num">The number.</param>
+        /// <returns></returns>
         public static float Sqrt(float num)
         {
             return (float)Math.Sqrt(num);

@@ -37,11 +37,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine
+namespace _2DGameEngine.Components
 {
     public class Transform : Component
     {
-        public Vector Position { get; set; }
+        public VectorF Position { get; set; }
         public float Depth { get; set; }
     }
 }

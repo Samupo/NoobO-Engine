@@ -76,6 +76,7 @@ namespace _2DGameEngine.SDL
             IMG_Init((UInt32)(ImageMode.IMG_INIT_PNG | ImageMode.IMG_INIT_JPG));
             Graphics.Initialize(800, 600);
 
+            thread.Start();
             while (true)
             {
                 SDL_Event e;
@@ -94,6 +95,7 @@ namespace _2DGameEngine.SDL
             IMG_Init((UInt32)(ImageMode.IMG_INIT_PNG | ImageMode.IMG_INIT_JPG));
             Graphics.InitializeFrom(handler, 640, 480);
 
+            thread.Start();
             while (true)
             {
                 SDL_Event e;

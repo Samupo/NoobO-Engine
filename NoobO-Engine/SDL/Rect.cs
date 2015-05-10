@@ -48,5 +48,13 @@ namespace _2DGameEngine.SDL
         int Y;
         int Width;
         int Height;
+
+        public Rect(int x, int y, int width, int height)
+        {
+            X = x;
+            Y = y;
+            Width = width;
+            Height = height;
+        }
     }
 }

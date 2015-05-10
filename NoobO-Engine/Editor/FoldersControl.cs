@@ -33,6 +33,7 @@
 #endregion
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -67,6 +68,7 @@ namespace _2DGameEngine.Editor
         public delegate void OnSelectionEventHandler(object sender, EventArgs e);
         public event OnSelectionEventHandler OnSelectionChanged;
         private FolderLabel selected = null;
+        [Browsable(false)]
         public string SelectedDirectory
         {
             get { return selected.Directory; }

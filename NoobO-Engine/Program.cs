@@ -47,10 +47,12 @@ namespace _2DGameEngine
         static void Main(string[] args)
         {
 #if EDITOR
+            // Run editor mode
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new EditorForm());
 #else
+            // Run game mode
             SDL.SDL.Run(new GameThread());
 #endif
         }

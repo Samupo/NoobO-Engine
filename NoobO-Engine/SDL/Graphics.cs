@@ -124,26 +124,26 @@ namespace _2DGameEngine.SDL
         }
         #endregion
 
-        public static Vector WindowSize
+        public static VectorF WindowSize
         {
             get
             {
                 int w, h;
                 SDL_GetWindowSize(WindowPtr, out w, out h);
-                return new Vector(w, h);
+                return new VectorF(w, h);
             }
             set
             {
                 SDL_SetWindowSize(WindowPtr, (int)value.X, (int)value.Y);
             }
         }
-        public static Vector WindowPosition
+        public static VectorF WindowPosition
         {
             get
             {
                 int x, y;
                 SDL_GetWindowPosition(WindowPtr, out x, out y);
-                return new Vector(x, y);
+                return new VectorF(x, y);
             }
             set
             {
@@ -238,6 +238,14 @@ namespace _2DGameEngine.SDL
         {
             SDL_RenderPresent(RendererPtr);
         }
+
+        public static void SetRenderTarget(IntPtr texturePtr)
+        {
+            SDL_SetRenderTarget(Graphics.RendererPtr, texturePtr);
+        }
+
+        [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
+        private static extern int SDL_SetRenderTarget(IntPtr renderer, IntPtr texture);
 
         [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr SDL_RenderPresent(IntPtr renderer);

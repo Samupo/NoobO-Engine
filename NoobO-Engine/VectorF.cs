@@ -39,36 +39,53 @@ using System.Threading.Tasks;
 
 namespace _2DGameEngine
 {
-    public class Component
+    public class VectorF
     {
-        private GameObject _go;
-        public GameObject GameObject { get { return _go; } private set { _go = value; } }
-        public virtual void Awake() { }
-        public virtual void Start() { }
-        public virtual void EarlyUpdate() { }
-        public virtual void Update() { }
-        public virtual void LateUpdate() { }
-        internal virtual void Render() { }
+        public float X { get; private set; }
+        public float Y { get; private set; }
 
-        internal void AssignToGameObject(GameObject go)
+        public float Length
         {
-            if (GameObject != null)
+            get
             {
-                Debug.Warn("This component is already assigned to a game object!");
+                return Mathf.Sqrt((X * X) + (Y * Y));
             }
-            else
-            {
-                Remove();
-            }
-            GameObject = go;
         }
 
-        public void Remove()
+        public VectorF()
         {
-            if (GameObject != null)
-            {
-                GameObject.RemoveComponent(this);
-            }
+            this.X = 0;
+            this.Y = 0;
+        }
+
+        public VectorF(float x, float y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
+
+        public static float Distance(VectorF v1, VectorF v2)
+        {
+            return (v1 - v2).Length;
+        }
+
+        public static VectorF operator +(VectorF v1, VectorF v2)
+        {
+            return new VectorF(v1.X + v2.X, v1.Y + v2.Y);
+        }
+
+        public static VectorF operator -(VectorF v1, VectorF v2)
+        {
+            return new VectorF(v1.X - v2.X, v1.Y - v2.Y);
+        }
+
+        public static VectorF operator*(VectorF v, float f) {
+            return new VectorF(v.X * f, v.Y *f);
+        }
+
+        public static VectorF operator /(VectorF v, float f)
+        {
+            return new VectorF(v.X / f, v.Y / f);
         }
     }
 }

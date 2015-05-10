@@ -41,6 +41,7 @@ namespace _2DGameEngine.SDL
 {
     public interface ISDLThread
     {
+        void Start();
         void Update();
         void Render();
     }

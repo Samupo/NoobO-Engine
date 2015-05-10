@@ -4,3 +4,8 @@ D:\Universidad\2DGameEngine\NoobO-Engine\obj\Editor\2DGameEngine.pdb
 D:\Universidad\NoobO-Engine\NoobO-Engine\bin\Editor\2DGameEngine.exe.config
 D:\Universidad\NoobO-Engine\NoobO-Engine\obj\Editor\2DGameEngine.exe
 D:\Universidad\NoobO-Engine\NoobO-Engine\obj\Editor\2DGameEngine.pdb
+D:\Universidad\NoobO-Engine\NoobO-Engine\obj\Editor\NoobO-Engine.csprojResolveAssemblyReference.cache
+D:\Universidad\NoobO-Engine\NoobO-Engine\obj\Editor\_2DGameEngine.Editor.EditorForm.resources
+D:\Universidad\NoobO-Engine\NoobO-Engine\obj\Editor\NoobO-Engine.csproj.GenerateResource.Cache
+D:\Universidad\NoobO-Engine\NoobO-Engine\bin\Editor\2DGameEngine.exe
+D:\Universidad\NoobO-Engine\NoobO-Engine\bin\Editor\2DGameEngine.pdb

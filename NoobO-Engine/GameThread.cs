@@ -40,9 +40,31 @@ using System.Threading.Tasks;
 
 namespace _2DGameEngine
 {
+    /// <summary>
+    /// This class manages the main game loop.
+    /// </summary>
     internal class GameThread : ISDLThread
     {
-        public void Update() { }
-        public void Render() { }
+        /// <summary>
+        /// Called after SDL initialization.
+        /// </summary>
+        public void Start()
+        {
+            GameObjectManager.Initialize();
+        }
+        /// <summary>
+        /// Updates the game.
+        /// </summary>
+        public void Update()
+        {
+            GameObjectManager.Update();
+        }
+        /// <summary>
+        /// Renders the game.
+        /// </summary>
+        public void Render()
+        {
+            GameObjectManager.Render();
+        }
     }
 }

@@ -37,54 +37,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine
+namespace _2DGameEngine.Components
 {
-    public class Vector
+    public class Component
     {
-        public float X { get; private set; }
-        public float Y { get; private set; }
-        public float Length
+        private GameObject _go;
+        public GameObject GameObject { get { return _go; } private set { _go = value; } }
+        public virtual void Awake() { }
+        public virtual void Start() { }
+        public virtual void EarlyUpdate() { }
+        public virtual void Update() { }
+        public virtual void LateUpdate() { }
+        internal virtual void Render() { }
+
+        internal void AssignToGameObject(GameObject go)
         {
-            get
+            if (GameObject != null)
             {
-                return Mathf.Sqrt((X * X) + (Y * Y));
+                Debug.Warn("This component is already assigned to a game object!");
             }
+            else
+            {
+                Remove();
+            }
+            GameObject = go;
         }
 
-        public Vector()
+        public void Remove()
         {
-            this.X = 0;
-            this.Y = 0;
-        }
-
-        public Vector(float x, float y)
-        {
-            this.X = x;
-            this.Y = y;
-        }
-
-        public static float Distance(Vector v1, Vector v2)
-        {
-            return (v1 - v2).Length;
-        }
-
-        public static Vector operator +(Vector v1, Vector v2)
-        {
-            return new Vector(v1.X + v2.X, v1.Y + v2.Y);
-        }
-
-        public static Vector operator -(Vector v1, Vector v2)
-        {
-            return new Vector(v1.X - v2.X, v1.Y - v2.Y);
-        }
-
-        public static Vector operator*(Vector v, float f) {
-            return new Vector(v.X * f, v.Y *f);
-        }
-
-        public static Vector operator /(Vector v, float f)
-        {
-            return new Vector(v.X / f, v.Y / f);
+            if (GameObject != null)
+            {
+                GameObject.RemoveComponent(this);
+            }
         }
     }
 }

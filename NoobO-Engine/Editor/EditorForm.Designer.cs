@@ -35,11 +35,11 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.foldersControl1 = new _2DGameEngine.Editor.FoldersControl();
+            this.filesControl1 = new _2DGameEngine.Editor.FilesControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.foldersControl1 = new _2DGameEngine.Editor.FoldersControl();
-            this.filesControl1 = new _2DGameEngine.Editor.FilesControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -98,7 +98,7 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.White;
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer5);
             this.splitContainer2.Size = new System.Drawing.Size(1008, 656);
-            this.splitContainer2.SplitterDistance = 257;
+            this.splitContainer2.SplitterDistance = 349;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -115,7 +115,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(1008, 257);
+            this.splitContainer3.Size = new System.Drawing.Size(1008, 349);
             this.splitContainer3.SplitterDistance = 128;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -133,7 +133,7 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.splitContainer4.Size = new System.Drawing.Size(876, 257);
+            this.splitContainer4.Size = new System.Drawing.Size(876, 349);
             this.splitContainer4.SplitterDistance = 656;
             this.splitContainer4.TabIndex = 0;
             // 
@@ -151,9 +151,29 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.filesControl1);
-            this.splitContainer5.Size = new System.Drawing.Size(1008, 395);
+            this.splitContainer5.Size = new System.Drawing.Size(1008, 303);
             this.splitContainer5.SplitterDistance = 294;
             this.splitContainer5.TabIndex = 0;
+            // 
+            // foldersControl1
+            // 
+            this.foldersControl1.CurrentDirectory = "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\Common7\\IDE";
+            this.foldersControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.foldersControl1.Location = new System.Drawing.Point(0, 0);
+            this.foldersControl1.Name = "foldersControl1";
+            this.foldersControl1.Size = new System.Drawing.Size(290, 299);
+            this.foldersControl1.TabIndex = 0;
+            this.foldersControl1.Text = "foldersControl1";
+            // 
+            // filesControl1
+            // 
+            this.filesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.filesControl1.FoldersControl = this.foldersControl1;
+            this.filesControl1.Location = new System.Drawing.Point(0, 0);
+            this.filesControl1.Name = "filesControl1";
+            this.filesControl1.Size = new System.Drawing.Size(706, 299);
+            this.filesControl1.TabIndex = 0;
+            this.filesControl1.Text = "filesControl1";
             // 
             // menuStrip1
             // 
@@ -178,25 +198,6 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // foldersControl1
-            // 
-            this.foldersControl1.CurrentDirectory = "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\Common7\\IDE";
-            this.foldersControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.foldersControl1.Location = new System.Drawing.Point(0, 0);
-            this.foldersControl1.Name = "foldersControl1";
-            this.foldersControl1.Size = new System.Drawing.Size(290, 391);
-            this.foldersControl1.TabIndex = 0;
-            this.foldersControl1.Text = "foldersControl1";
-            // 
-            // filesControl1
-            // 
-            this.filesControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.filesControl1.Location = new System.Drawing.Point(0, 0);
-            this.filesControl1.Name = "filesControl1";
-            this.filesControl1.Size = new System.Drawing.Size(706, 391);
-            this.filesControl1.TabIndex = 0;
-            this.filesControl1.Text = "filesControl1";
             // 
             // EditorForm
             // 

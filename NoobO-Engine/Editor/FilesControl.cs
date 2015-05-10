@@ -120,7 +120,7 @@ namespace _2DGameEngine.Editor
             get { return _fc; }
             set
             {
-                if (_fc != null) throw new Exception("Folders Control already set!");
+                if (_fc != null && _fc != value) throw new Exception("Folders Control already set!");
                 _fc = value;
                 FoldersControl.OnSelectionChanged += FoldersControl_OnSelectionChanged;
             }

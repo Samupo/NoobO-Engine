@@ -31,6 +31,7 @@
  *
  */
 #endregion
+using _2DGameEngine.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,15 +40,27 @@ using System.Threading.Tasks;
 
 namespace _2DGameEngine
 {
+    /// <summary>
+    /// GameObject base class.
+    /// </summary>
     public class GameObject
     {
-        LinkedList<Component> components;
+        /// <summary>
+        /// Component list
+        /// </summary>
+        private LinkedList<Component> components;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GameObject"/> class.
+        /// </summary>
         public GameObject()
         {
             components = new LinkedList<Component>();
         }
 
+        /// <summary>
+        /// Called when the entity enters the game.
+        /// </summary>
         internal void Awake()
         {
             foreach (Component component in components)
@@ -55,6 +68,10 @@ namespace _2DGameEngine
                 component.Awake();
             }
         }
+
+        /// <summary>
+        /// Called afer the Awake method.
+        /// </summary>
         internal void Start()
         {
             foreach (Component component in components)
@@ -62,6 +79,10 @@ namespace _2DGameEngine
                 component.Start();
             }
         }
+
+        /// <summary>
+        /// Called every game tick.
+        /// </summary>
         internal void EarlyUpdate()
         {
             foreach (Component component in components)
@@ -69,6 +90,10 @@ namespace _2DGameEngine
                 component.EarlyUpdate();
             }
         }
+
+        /// <summary>
+        /// Called every game tick after all EarlyUpdate methods have been called.
+        /// </summary>
         internal void Update()
         {
             foreach (Component component in components)
@@ -76,6 +101,10 @@ namespace _2DGameEngine
                 component.Update();
             }
         }
+
+        /// <summary>
+        /// Called every game tick after all Update methods have been called.
+        /// </summary>
         internal void LateUpdate()
         {
             foreach (Component component in components)
@@ -83,6 +112,10 @@ namespace _2DGameEngine
                 component.LateUpdate();
             }
         }
+
+        /// <summary>
+        /// Renders this instance.
+        /// </summary>
         internal void Render()
         {
             foreach (Component component in components)
@@ -91,11 +124,20 @@ namespace _2DGameEngine
             }
         }
 
+        /// <summary>
+        /// Adds the component.
+        /// </summary>
+        /// <param name="component">Component.</param>
         public void AddComponent(Component component)
         {
             components.AddLast(component);
         }
 
+        /// <summary>
+        /// Gets the components.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public T[] GetComponents<T>() where T : Component
         {
             List<T> list = new List<T>();
@@ -109,11 +151,18 @@ namespace _2DGameEngine
             return list.ToArray();
         }
 
+        /// <summary>
+        /// Removes the component.
+        /// </summary>
+        /// <param name="component">The component.</param>
         internal void RemoveComponent(Component component)
         {
             components.Remove(component);
         }
 
+        /// <summary>
+        /// Destroys this instance.
+        /// </summary>
         public void Destroy()
         {
 

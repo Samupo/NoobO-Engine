@@ -44,6 +44,22 @@ namespace _2DGameEngine.SDL
         MOD = 0x00000004
     }
 
+    [Flags]
+    public enum Flip
+    {
+        /// <summary>
+        /// Not flipped
+        /// </summary>
+        NONE = 0x00000000,
+        /// <summary>
+        /// Flipped horizontally
+        /// </summary>
+        HORIZONTAL = 0x00000001,
+        /// <summary>
+        /// Flipped vertically
+        /// </summary>
+        VERTICAL = 0x00000002
+    }
     /// <summary>
     /// Represents a texture that is stored in memory.
     /// </summary>
@@ -57,8 +73,8 @@ namespace _2DGameEngine.SDL
 
         private enum PixelFormat
         {
-            ARGB8888,
-            RGBA8888
+            ARGB8888 = 0x16762004,
+            RGBA8888 = 0x16462004
         }
 
         [StructLayout(LayoutKind.Sequential)]
@@ -114,12 +130,20 @@ namespace _2DGameEngine.SDL
             texture = SDL_Texture.FromPointer(TexturePtr);
         }
 
-        public void Draw()
+        public void Draw(Rect srcRect, Rect dstRect, double angle = 0.0, Flip flip = Flip.NONE)
         {
             SDL_SetTextureBlendMode(TexturePtr, (uint)BlendMode);
             SDL_SetTextureAlphaMod(TexturePtr, Color.A);
             SDL_SetTextureColorMod(TexturePtr, Color.R, Color.G, Color.B);
-            SDL_RenderCopy(Graphics.RendererPtr, TexturePtr, IntPtr.Zero, IntPtr.Zero);
+            SDL_RenderCopyEx(Graphics.RendererPtr, TexturePtr, ref srcRect, ref dstRect, angle, IntPtr.Zero, (uint)flip);
+        }
+
+        public void Draw(Rect dstRect, double angle = 0.0, Flip flip = Flip.NONE)
+        {
+            SDL_SetTextureBlendMode(TexturePtr, (uint)BlendMode);
+            SDL_SetTextureAlphaMod(TexturePtr, Color.A);
+            SDL_SetTextureColorMod(TexturePtr, Color.R, Color.G, Color.B);
+            SDL_RenderCopyEx(Graphics.RendererPtr, TexturePtr, IntPtr.Zero, ref dstRect, angle, IntPtr.Zero, (uint)flip);
         }
 
         ~Texture()
@@ -152,7 +176,6 @@ namespace _2DGameEngine.SDL
         }
 
         #region NATIVE CODE
-
         [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern int SDL_RenderCopy(IntPtr renderer, IntPtr texture, IntPtr srcRect, IntPtr dstRect);
 
@@ -182,6 +205,9 @@ namespace _2DGameEngine.SDL
 
         [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern int SDL_RenderCopyEx(IntPtr renderer, IntPtr texture, ref Rect srcRect, ref Rect dstRect, double angle, IntPtr center, uint flip);
+
+        [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
+        private static extern int SDL_RenderCopyEx(IntPtr renderer, IntPtr texture, IntPtr srcRect, ref Rect dstRect, double angle, IntPtr center, uint flip);
 
         [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern void SDL_DestroyTexture(IntPtr texture);

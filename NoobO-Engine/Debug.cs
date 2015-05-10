@@ -45,16 +45,30 @@ namespace _2DGameEngine
         const ConsoleColor WARNING_COLOR = ConsoleColor.Yellow;
         const ConsoleColor ERROR_COLOR = ConsoleColor.Red;
 
+        /// <summary>
+        /// Logs information on output.
+        /// </summary>
+        /// <param name="info">Information text</param>
         public static void Log(string info)
         {
             Console.ForegroundColor = INFORMATION_COLOR;
             Console.WriteLine("[INFO] " + info);
         }
+
+        /// <summary>
+        /// Logs a warning on output.
+        /// </summary>
+        /// <param name="warning">Warning text</param>
         public static void Warn(string warning)
         {
             Console.ForegroundColor = WARNING_COLOR;
             Console.WriteLine("[WARNING] " + warning);
         }
+
+        /// <summary>
+        /// Logs an error on output. Does not stop execution.
+        /// </summary>
+        /// <param name="error">Error text</param>
         public static void Error(string error)
         {
             Console.ForegroundColor = ERROR_COLOR;

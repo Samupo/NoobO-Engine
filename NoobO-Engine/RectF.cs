@@ -31,17 +31,35 @@
  *
  */
 #endregion
+using _2DGameEngine.SDL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _2DGameEngine
 {
-    public class Screen : Component
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct RectF
     {
-        public Vector Position;
-        public Vector Size;
+        public float X { get; private set; }
+        public float Y { get; private set; }
+        public float Width { get; private set; }
+        public float Height { get; private set; }
+
+        public RectF(float x, float y, float width, float height)
+        {
+            X = x;
+            Y = y;
+            Width = width;
+            Height = height;
+        }
+
+        public static implicit operator Rect(RectF r) {
+            return new Rect((int)r.X, (int)r.Y, (int)r.Width, (int)r.Height);
+        }
     }
 }
