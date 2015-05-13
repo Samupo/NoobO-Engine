@@ -5,3 +5,4 @@ D:\Universidad\NoobO-Engine\NoobO-Engine\bin\PC\2DGameEngine.exe
 D:\Universidad\NoobO-Engine\NoobO-Engine\bin\PC\2DGameEngine.pdb
 D:\Universidad\NoobO-Engine\NoobO-Engine\obj\PC\_2DGameEngine.Editor.EditorForm.resources
 D:\Universidad\NoobO-Engine\NoobO-Engine\obj\PC\NoobO-Engine.csproj.GenerateResource.Cache
+D:\Universidad\NoobO-Engine\NoobO-Engine\obj\PC\NoobO_Engine.Editor.EditorForm.resources

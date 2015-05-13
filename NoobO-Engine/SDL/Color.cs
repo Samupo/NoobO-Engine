@@ -37,42 +37,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.SDL
+namespace NoobO_Engine.SDL
 {
-    public struct Color {
-        private _Color color;
-        public byte R { get { if (color == null) return 255; return color.R; } }
-        public byte G { get { if (color == null) return 255; return color.G; } }
-        public byte B { get { if (color == null) return 255; return color.B; } }
-        public byte A { get { if (color == null) return 255; return color.A; } }
+    public struct Color
+    {
+        public byte R;
+        public byte G;
+        public byte B;
+        public byte A;
 
         public Color(byte r, byte g, byte b, byte alpha = 255)
         {
-            color = new _Color(r,g,b,alpha);
-        }
-
-        private class _Color
-        {
-            public byte R;
-            public byte G;
-            public byte B;
-            public byte A;
-
-            public _Color()
-            {
-                R = 255;
-                G = 255;
-                B = 255;
-                A = 255;
-            }
-
-            public _Color(byte r, byte g, byte b, byte a)
-            {
-                R = r;
-                G = g;
-                B = b;
-                A = a;
-            }
+            R = r;
+            G = g;
+            B = b;
+            A = alpha;
         }
     }
 }

@@ -37,7 +37,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.SDL
+namespace NoobO_Engine.SDL
 {
     public interface ISDLThread
     {

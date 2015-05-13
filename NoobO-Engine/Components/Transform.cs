@@ -31,17 +31,47 @@
  *
  */
 #endregion
+using NoobO_Engine.SDL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.Components
+namespace NoobO_Engine.Components
 {
     public class Transform : Component
     {
         public VectorF Position { get; set; }
-        public float Depth { get; set; }
+        private float _depth;
+        public float Depth
+        {
+            get
+            {
+                return _depth;
+            }
+            set
+            {
+                GameObjectManager.RemoveTransform(this);
+                _depth = value;
+                GameObjectManager.AddTransform(this);
+            }
+        }
+        public VectorF Size { get; set; }
+
+        public Transform()
+        {
+            GameObjectManager.AddTransform(this);
+        }
+
+        ~Transform()
+        {
+            GameObjectManager.RemoveTransform(this);
+        }
+
+        public RectF ToRectF()
+        {
+            return new RectF(Position.X, Position.Y, Size.X, Size.Y);
+        }
     }
 }

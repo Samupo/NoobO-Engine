@@ -7,13 +7,13 @@
     <ProjectGuid>{EC2768D7-B2FB-415B-A805-AF761FD88BCD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_2DGameEngine</RootNamespace>
+    <RootNamespace>NoobO_Engine</RootNamespace>
     <AssemblyName>2DGameEngine</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +24,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,7 +34,8 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>_2DGameEngine.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Editor|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -42,7 +43,7 @@
     <DefineConstants>TRACE;DEBUG;EDITOR</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
@@ -53,7 +54,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
@@ -79,6 +80,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\Component.cs" />
+    <Compile Include="Components\Renderer.cs" />
+    <Compile Include="Components\SpriteRenderer.cs" />
+    <Compile Include="Components\TextRenderer.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Editor\EditorForm.cs">
       <SubType>Form</SubType>
@@ -95,7 +99,7 @@
     <Compile Include="GameObject.cs" />
     <Compile Include="GameObjectManager.cs" />
     <Compile Include="Mathf.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="NoobOEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Camera.cs" />
     <Compile Include="GameThread.cs" />
@@ -106,6 +110,7 @@
     <Compile Include="SDL\Rect.cs" />
     <Compile Include="SDL\SDL.cs" />
     <Compile Include="SDL\SDL_Event.cs" />
+    <Compile Include="SDL\TextRendererNative.cs" />
     <Compile Include="SDL\Texture.cs" />
     <Compile Include="SDL\Graphics.cs" />
     <Compile Include="SDL\TextureManager.cs" />
@@ -114,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Editor\EditorForm.resx">

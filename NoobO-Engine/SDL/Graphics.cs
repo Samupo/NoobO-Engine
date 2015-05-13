@@ -39,7 +39,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.SDL
+namespace NoobO_Engine.SDL
 {
     internal abstract class Graphics
     {
@@ -237,12 +237,21 @@ namespace _2DGameEngine.SDL
         internal static void Render()
         {
             SDL_RenderPresent(RendererPtr);
+            /*SDL_SetRenderDrawColor(RendererPtr, 255, 128, 128, 255);
+            SDL_RenderClear(RendererPtr)^;*/
         }
 
         public static void SetRenderTarget(IntPtr texturePtr)
         {
             SDL_SetRenderTarget(Graphics.RendererPtr, texturePtr);
         }
+
+
+        [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
+        private static extern int SDL_RenderClear(IntPtr renderer);
+
+        [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
+        private static extern int SDL_SetRenderDrawColor(IntPtr renderer, byte r, byte g, byte b, byte a);
 
         [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern int SDL_SetRenderTarget(IntPtr renderer, IntPtr texture);

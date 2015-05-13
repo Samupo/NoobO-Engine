@@ -1,0 +1,8 @@
+D:\Universidad\NoobO-Engine\Example-Test\bin\Debug\Example-Test.exe.config
+D:\Universidad\NoobO-Engine\Example-Test\bin\Debug\Example-Test.exe
+D:\Universidad\NoobO-Engine\Example-Test\bin\Debug\Example-Test.pdb
+D:\Universidad\NoobO-Engine\Example-Test\bin\Debug\2DGameEngine.dll
+D:\Universidad\NoobO-Engine\Example-Test\bin\Debug\2DGameEngine.pdb
+D:\Universidad\NoobO-Engine\Example-Test\obj\Debug\Example-Test.csprojResolveAssemblyReference.cache
+D:\Universidad\NoobO-Engine\Example-Test\obj\Debug\Example-Test.exe
+D:\Universidad\NoobO-Engine\Example-Test\obj\Debug\Example-Test.pdb

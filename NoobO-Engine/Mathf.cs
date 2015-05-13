@@ -37,7 +37,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine
+namespace NoobO_Engine
 {
     /// <summary>
     /// Inefficient math class with floats

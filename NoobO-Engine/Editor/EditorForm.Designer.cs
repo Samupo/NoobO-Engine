@@ -1,4 +1,4 @@
-﻿namespace _2DGameEngine.Editor
+﻿namespace NoobO_Engine.Editor
 {
     partial class EditorForm
     {
@@ -35,8 +35,8 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.foldersControl1 = new _2DGameEngine.Editor.FoldersControl();
-            this.filesControl1 = new _2DGameEngine.Editor.FilesControl();
+            this.foldersControl1 = new NoobO_Engine.Editor.FoldersControl();
+            this.filesControl1 = new NoobO_Engine.Editor.FilesControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

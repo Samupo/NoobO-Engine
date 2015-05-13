@@ -31,7 +31,7 @@
  *
  */
 #endregion
-using _2DGameEngine.Editor;
+using NoobO_Engine.Editor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,11 +40,11 @@ using System.Threading.Tasks;
 using System.Web.Compilation;
 using System.Windows.Forms;
 
-namespace _2DGameEngine
+namespace NoobO_Engine
 {
-    class Program
+    public class NoobOEngine
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 #if EDITOR
             // Run editor mode

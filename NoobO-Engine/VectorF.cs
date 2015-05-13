@@ -37,12 +37,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine
+namespace NoobO_Engine
 {
-    public class VectorF
+    public struct VectorF
     {
-        public float X { get; private set; }
-        public float Y { get; private set; }
+        public float X;
+        public float Y;
 
         public float Length
         {
@@ -50,12 +50,6 @@ namespace _2DGameEngine
             {
                 return Mathf.Sqrt((X * X) + (Y * Y));
             }
-        }
-
-        public VectorF()
-        {
-            this.X = 0;
-            this.Y = 0;
         }
 
         public VectorF(float x, float y)

@@ -31,7 +31,7 @@
  *
  */
 #endregion
-using _2DGameEngine.SDL;
+using NoobO_Engine.SDL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,16 +39,16 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine
+namespace NoobO_Engine
 {
 
     [StructLayout(LayoutKind.Sequential)]
     public struct RectF
     {
-        public float X { get; private set; }
-        public float Y { get; private set; }
-        public float Width { get; private set; }
-        public float Height { get; private set; }
+        public float X;
+        public float Y;
+        public float Width;
+        public float Height;
 
         public RectF(float x, float y, float width, float height)
         {

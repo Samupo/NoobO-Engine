@@ -31,14 +31,15 @@
  *
  */
 #endregion
-using _2DGameEngine.Components;
+using NoobO_Engine.Components;
+using NoobO_Engine.SDL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine
+namespace NoobO_Engine
 {
     internal abstract class GameObjectManager
     {
@@ -49,6 +50,8 @@ namespace _2DGameEngine
         {
             public int Compare(Transform t1, Transform t2)
             {
+                if (t1 == t2) return 0;
+                if (t1.Depth == t2.Depth) return 1;
                 return (int)(t1.Depth - t2.Depth);
             }
         }
@@ -56,7 +59,7 @@ namespace _2DGameEngine
         /// <summary>
         /// Arbirtrary value for maximum depth.
         /// </summary>
-        const int MAX_DEPTH = 1000;
+        public const int MAX_DEPTH = 1000;
         /// <summary>
         /// The game objects in scene.
         /// </summary>
@@ -77,11 +80,34 @@ namespace _2DGameEngine
             }
         }
 
+        internal static void AddGameObject(GameObject go)
+        {
+            gameObjectsInScene.Add(go);
+        }
+
+        internal static void RemoveGameObject(GameObject go)
+        {
+            gameObjectsInScene.Remove(go);
+        }
+
+        internal static void AddTransform(Transform tr) {
+            transforms[(int)tr.Depth].Add(tr);
+        }
+
+        internal static void RemoveTransform(Transform tr)
+        {
+            transforms[(int)tr.Depth].Remove(tr);
+        }
+
         /// <summary>
         /// Updates the current scene.
         /// </summary>
         public static void Update()
         {
+            foreach (GameObject go in gameObjectsInScene)
+            {
+                go.DoStartRoutine();
+            }
             foreach (GameObject go in gameObjectsInScene)
             {
                 go.EarlyUpdate();
@@ -101,12 +127,20 @@ namespace _2DGameEngine
         /// </summary>
         public static void Render()
         {
-            for (int i = 0; i < MAX_DEPTH; i++)
+            foreach (Camera camera in Camera.GetAllCameras())
             {
-                foreach (Transform tr in transforms[i])
+                Graphics.SetRenderTarget(camera.RenderTexture.TexturePtr);
+                for (int i = 0; i < MAX_DEPTH; i++)
                 {
-                    tr.Render();
+                    foreach (Transform tr in transforms[i])
+                    {
+                        tr.GameObject.Render(camera.Transform.ToRectF());
+                    }
                 }
+            }
+            foreach (Camera camera in Camera.GetAllCameras())
+            {
+                camera.CameraRender();
             }
         }
     }

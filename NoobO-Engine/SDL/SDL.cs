@@ -39,7 +39,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.SDL
+namespace NoobO_Engine.SDL
 {
     internal enum Initializers
     {
@@ -74,6 +74,7 @@ namespace _2DGameEngine.SDL
         {
             SDL_Init((UInt32)Initializers.SDL_INIT_EVERYTHING);
             IMG_Init((UInt32)(ImageMode.IMG_INIT_PNG | ImageMode.IMG_INIT_JPG));
+            TTF_Init();
             Graphics.Initialize(800, 600);
 
             thread.Start();
@@ -86,6 +87,8 @@ namespace _2DGameEngine.SDL
                 thread.Render();
 
                 Graphics.Render();
+
+                SDL_Delay(100);
             }
         }
 
@@ -93,6 +96,7 @@ namespace _2DGameEngine.SDL
         {
             SDL_Init((UInt32)Initializers.SDL_INIT_EVERYTHING);
             IMG_Init((UInt32)(ImageMode.IMG_INIT_PNG | ImageMode.IMG_INIT_JPG));
+            TTF_Init();
             Graphics.InitializeFrom(handler, 640, 480);
 
             thread.Start();
@@ -105,10 +109,12 @@ namespace _2DGameEngine.SDL
                 thread.Render();
 
                 Graphics.Render();
+                SDL_Delay(100);
             }
-
         }
 
+        [DllImport(TTFLIB, CallingConvention = CallingConvention.Cdecl)]
+        private static extern int TTF_Init();
 
         [DllImport(IMGLIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern int IMG_Init(UInt32 flags);
@@ -118,5 +124,8 @@ namespace _2DGameEngine.SDL
 
         [DllImport(NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern int SDL_Init(UInt32 flags);
+
+        [DllImport(NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
+        private static extern void SDL_Delay(UInt32 ms);
     }
 }

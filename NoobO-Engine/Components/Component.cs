@@ -31,13 +31,14 @@
  *
  */
 #endregion
+using NoobO_Engine.SDL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.Components
+namespace NoobO_Engine.Components
 {
     public class Component
     {
@@ -48,7 +49,7 @@ namespace _2DGameEngine.Components
         public virtual void EarlyUpdate() { }
         public virtual void Update() { }
         public virtual void LateUpdate() { }
-        internal virtual void Render() { }
+        internal virtual void Render(Rect viewport) { }
 
         internal void AssignToGameObject(GameObject go)
         {

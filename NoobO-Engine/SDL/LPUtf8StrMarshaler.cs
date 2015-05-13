@@ -32,7 +32,7 @@ using System;
 using System.Text;
 using System.Runtime.InteropServices;
 
-namespace _2DGameEngine.SDL
+namespace NoobO_Engine.SDL
 {
     internal unsafe class LPUtf8StrMarshaler : ICustomMarshaler
     {

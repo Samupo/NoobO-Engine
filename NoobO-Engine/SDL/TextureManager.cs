@@ -38,7 +38,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.SDL
+namespace NoobO_Engine.SDL
 {
     internal abstract class TextureManager
     {

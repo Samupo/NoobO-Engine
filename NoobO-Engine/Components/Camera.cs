@@ -31,14 +31,14 @@
  *
  */
 #endregion
-using _2DGameEngine.SDL;
+using NoobO_Engine.SDL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.Components
+namespace NoobO_Engine.Components
 {
     public class Camera : Component
     {
@@ -46,37 +46,58 @@ namespace _2DGameEngine.Components
         {
             public int Compare(Camera c1, Camera c2)
             {
-                return c1.Depth - c2.Depth;
+                if (c1 == c2) return 0;
+                if (c1.ScreenLayer == c2.ScreenLayer) return 1;
+                return c1.ScreenLayer - c2.ScreenLayer;
             }
         }
-        private int _width = (int)Graphics.WindowSize.X;
-        private int _height = (int)Graphics.WindowSize.Y;
-        public int Width { get { return _width; } set { _width = value; RecreateInternalTexture(); } }
-        public int Height { get { return _height; } set { _height = value; RecreateInternalTexture(); } }
         private RectF _screen = new RectF(0,0,1,1);
         public RectF Screen {get {return _screen;} set {_screen = value;}}
-        public int Depth { get; set; }
+        private int _screenLayer = 0;
+        public int ScreenLayer
+        {
+            get { return _screenLayer; }
+            set
+            {
+                allCameras.Remove(this);
+                _screenLayer = value;
+                allCameras.Add(this);
+            }
+        }
         private bool _active = true;
         public bool Active { get { return GameObject != null && _active; } set { _active = value; } }
+        private static SortedSet<Camera> allCameras = new SortedSet<Camera>(new CameraComparer());
+        internal Transform Transform { get; private set; }
+
+        public static ICollection<Camera> GetAllCameras()
+        {
+            return allCameras.ToArray();
+        }
 
         public Texture RenderTexture { get; private set; }
 
-        public Camera(int depth = 0)
+        public override void Awake()
         {
-            Width = (int)Graphics.WindowSize.X;
-            Height = (int)Graphics.WindowSize.Y;
-
+            Transform = GameObject.GetComponents<Transform>()[0];
+            if (Transform == null)
+            {
+                Debug.Error("Renderer component requires a Transform component");
+            }
             RecreateInternalTexture();
+        }
 
+
+        public Camera()
+        {
             allCameras.Add(this);
         }
 
         private void RecreateInternalTexture()
         {
-            RenderTexture = new Texture(Width, Height); 
+            RenderTexture = new Texture((int)Transform.Size.X, (int)Transform.Size.Y); 
         }
 
-        internal override void Render()
+        internal void CameraRender()
         {
             Graphics.SetRenderTarget(IntPtr.Zero);
             RectF dstRect = new RectF(Screen.X * Graphics.WindowSize.X, Screen.Y * Graphics.WindowSize.Y, Screen.Width * Graphics.WindowSize.X, Screen.Height * Graphics.WindowSize.Y);
@@ -88,7 +109,6 @@ namespace _2DGameEngine.Components
             allCameras.Remove(this);
         }
 
-        private static SortedSet<Camera> allCameras = new SortedSet<Camera>(new CameraComparer());
-
+        
     }
 }

@@ -31,8 +31,8 @@
  *
  */
 #endregion
-using _2DGameEngine;
-using _2DGameEngine.SDL;
+using NoobO_Engine;
+using NoobO_Engine.SDL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,7 +44,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _2DGameEngine.Editor
+namespace NoobO_Engine.Editor
 {
     public partial class EditorForm : Form
     {
@@ -81,7 +81,7 @@ namespace _2DGameEngine.Editor
                 y += control.Top;
                 control = control.Parent;
             }
-            _2DGameEngine.SDL.Graphics.ChangeWindowPosInEditor(this.Handle, x, y, splitContainer4.Panel1.Width, splitContainer4.Panel1.Height);
+            NoobO_Engine.SDL.Graphics.ChangeWindowPosInEditor(this.Handle, x, y, splitContainer4.Panel1.Width, splitContainer4.Panel1.Height);
         }
 
     }

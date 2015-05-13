@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="NoobO_Engine.Components.Camera">
+    <Position X="0.5" Y="4.5" Width="2" />
+    <NestedTypes>
+      <Class Name="NoobO_Engine.Components.Camera.CameraComparer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Components\Camera.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAgAgABABAAAQAAIACAAAgAAAQIAAAAEg=</HashCode>
+      <FileName>Components\Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Components.Component">
+    <Position X="4" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAACAAEAAAAAAAJBAAAAAAAAAAABAAAAIAAEA=</HashCode>
+      <FileName>Components\Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Components.Renderer">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEBAAAACAAAAAAAAAAAAAAAAAQAEAAAAABAAAAAAAEA=</HashCode>
+      <FileName>Components\Renderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Components.SpriteRenderer">
+    <Position X="3.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAACAAAAAAAAAQAAAAAAAQAAAgAAAAAAAABAAAA=</HashCode>
+      <FileName>Components\SpriteRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Components.TextRenderer">
+    <Position X="5.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAACAAAAAAABAAAAAAAAAQAAAAAAAAIACAAgAAA=</HashCode>
+      <FileName>Components\TextRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Components.Transform">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIgAAAAAAAgAAgAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Components\Transform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Debug" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAQAAAAAAAAAAgAgAAAEAAAAACAAAAAA=</HashCode>
+      <FileName>Debug.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.GameObject" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAIEAAAAACAIgAgAABAAABEABAAAAAAAEA=</HashCode>
+      <FileName>GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.GameObjectManager" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="NoobO_Engine.GameObjectManager.SortByDepth" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GameObjectManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AARkAAAAAAAAAQAAAAAAAAAIAAAAAAIEABAAAAAIAAA=</HashCode>
+      <FileName>GameObjectManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.GameThread" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>GameThread.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="NoobO_Engine.Mathf" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mathf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.NoobOEngine" Collapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>NoobOEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Editor.EditorForm" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hQyAAQAAACAAAAAAAQCAAAACAAAAIRAAAAAAAAAAAAA=</HashCode>
+      <FileName>Editor\EditorForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Editor.FileItem" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAAAAAAIAACQAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Editor\FilesControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Editor.FilesControl" Collapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAAAAAAAAAQAAAAAgBAAAAAAAAAAAIABAAA=</HashCode>
+      <FileName>Editor\FilesControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Editor.FolderPictureBox" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Editor\FoldersControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Editor.FolderLabel" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Editor\FoldersControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.Editor.FoldersControl" Collapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="NoobO_Engine.Editor.FoldersControl.OnSelectionEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Editor\FoldersControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAACAIQEQAQAAAAAAAAAAAAAAAAAggBCAAA=</HashCode>
+      <FileName>Editor\FoldersControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.SDL.Graphics" Collapsed="true">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="NoobO_Engine.SDL.Graphics.SDL_version" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="NoobO_Engine.SDL.Graphics.INTERNAL_uikit_wminfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="NoobO_Engine.SDL.Graphics.WindowFlags" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="NoobO_Engine.SDL.Graphics.INTERNAL_windows_wminfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="NoobO_Engine.SDL.Graphics.SDL_SysWMinfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="NoobO_Engine.SDL.Graphics.ShowWindowCommand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="NoobO_Engine.SDL.Graphics.INTERNAL_SysWMDriverUnion" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="NoobO_Engine.SDL.Graphics.RendererFlags" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="NoobO_Engine.SDL.Graphics.INTERNAL_directfb_wminfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="NoobO_Engine.SDL.Graphics.SDL_SYSWM_TYPE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="NoobO_Engine.SDL.Graphics.SetWindowPosFlags" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="NoobO_Engine.SDL.Graphics.INTERNAL_cocoa_wminfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="NoobO_Engine.SDL.Graphics.INTERNAL_x11_wminfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Graphics.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>kIAAAAAAAwKAIQRAQAIIAEEIAEAgCAACAlAEgCRAAAA=</HashCode>
+      <FileName>SDL\Graphics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.SDL.LPUtf8StrMarshaler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAIBgAQBAAAQIAAAAAIAAQ=</HashCode>
+      <FileName>SDL\LPUtf8StrMarshaler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="NoobO_Engine.SDL.SDL" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAIAAAQAACAICAAAAgAAAAAAAAAACAAAAAAIAAI=</HashCode>
+      <FileName>SDL\SDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.SDL.SDL_EventConstants" Collapsed="true">
+    <Position X="19" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.SDL.FontInfo" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\TextRendererNative.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.SDL.Font" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAIAAAAAAAAABEAgAAAAAAAAAAAAAECAAAg=</HashCode>
+      <FileName>SDL\TextRendererNative.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.SDL.TextRendererNative" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAgAACAAAAAAAAAAAAAIAAIACAAgAAA=</HashCode>
+      <FileName>SDL\TextRendererNative.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.SDL.Texture" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="NoobO_Engine.SDL.Texture.TextureAccess" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Texture.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="NoobO_Engine.SDL.Texture.PixelFormat" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Texture.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Struct Name="NoobO_Engine.SDL.Texture.SDL_Texture" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SDL\Texture.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EgICAAACBCQICgAAAgAAAEAgEAEEAgAABAAFgAAAIAA=</HashCode>
+      <FileName>SDL\Texture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoobO_Engine.SDL.TextureManager" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAACBAAAAAAAAAAAAAAAAAAAAAAAEAgEAFCAAAA=</HashCode>
+      <FileName>SDL\TextureManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="NoobO_Engine.RectF" Collapsed="true">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAYAA=</HashCode>
+      <FileName>RectF.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.VectorF" Collapsed="true">
+    <Position X="17.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAYAUAAABAAAAAAABAAAAAAAAAYAA=</HashCode>
+      <FileName>VectorF.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.Color" Collapsed="true">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAEAAQA=</HashCode>
+      <FileName>SDL\Color.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.Rect" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAEAAAAAEAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>SDL\Rect.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_Keysym" Collapsed="true">
+    <Position X="17.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAABAAAAABAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_GenericEvent" Collapsed="true">
+    <Position X="15.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_WindowEvent" Collapsed="true">
+    <Position X="15.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAAAAAAAAAAAAAAAAAAQAAQAgABAgAABAAAAAAABAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_KeyboardEvent" Collapsed="true">
+    <Position X="15.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RIAAAAAAAAAAAAAAAAAAAAAQAgABAgAEAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_TextEditingEvent" Collapsed="true">
+    <Position X="19" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAgAEAAAAAAAgABAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_TextInputEvent" Collapsed="true">
+    <Position X="10.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAgABAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_MouseMotionEvent" Collapsed="true">
+    <Position X="10.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DIAAAAAAAAAAAAAAAAAAAAAQQgABAAAEBABgABAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_MouseButtonEvent" Collapsed="true">
+    <Position X="19" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAABAAAAAAAAAAAAAAAAAQgABAAAEBABiAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_MouseWheelEvent" Collapsed="true">
+    <Position X="12" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAQgABAAAAAABgAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_JoyAxisEvent" Collapsed="true">
+    <Position X="17.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAEAAAAQSgABAAIABAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_JoyBallEvent" Collapsed="true">
+    <Position X="19" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAgAAAAAAAAAAAAAAAAAAQQgABAAAABAAAABAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_JoyHatEvent" Collapsed="true">
+    <Position X="13.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAIAAAAAAAAAAAAAAAAAQgABAAAABAAAAAAABAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_JoyButtonEvent" Collapsed="true">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAABAAAAAAAAAAAAAAAAAQgABAAAEBAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_JoyDeviceEvent" Collapsed="true">
+    <Position X="12" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQgABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_ControllerAxisEvent" Collapsed="true">
+    <Position X="15.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAEAAAAQSgABAAIABAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_ControllerButtonEvent" Collapsed="true">
+    <Position X="17.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAABAAAAAAAAAAAAAAAAAQgABAAAEBAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_ControllerDeviceEvent" Collapsed="true">
+    <Position X="19" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQgABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_TouchFingerEvent" Collapsed="true">
+    <Position X="12" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAIAAAAAgABAAACAABgAAAABAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_MultiGestureEvent" Collapsed="true">
+    <Position X="13.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAgAAAgAAAAAAAAAgABAAAAAABgAAACAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_DollarGestureEvent" Collapsed="true">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAEAAAAAAgADAAAAAABgAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_DropEvent" Collapsed="true">
+    <Position X="12" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgABAAAABAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_QuitEvent" Collapsed="true">
+    <Position X="15.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_UserEvent" Collapsed="true">
+    <Position X="13.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAIgABAgAAAAAAAAAABAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_SysWMEvent" Collapsed="true">
+    <Position X="17.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NoobO_Engine.SDL.SDL_Event" Collapsed="true">
+    <Position X="13.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBBQAAAAADAEAAEAMAAEAgBAAAYCAABEgIAAQA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="NoobO_Engine.SDL.ISDLThread" Collapsed="true">
+    <Position X="10.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>SDL\ISDLThread.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="NoobO_Engine.SDL.Initializers" Collapsed="true">
+    <Position X="15.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAEAAAAAAAAAAgAAAAAAAAAAAAAAQQBEAAAAA=</HashCode>
+      <FileName>SDL\SDL.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NoobO_Engine.SDL.ImageMode" Collapsed="true">
+    <Position X="13.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAgAAA=</HashCode>
+      <FileName>SDL\SDL.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NoobO_Engine.SDL.SDL_Scancode" Collapsed="true">
+    <Position X="12" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cBr17j3uW8xMlYv+Bz6GSw93ta5ai1WizWDyz0/haXM=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NoobO_Engine.SDL.SDL_Keycode" Collapsed="true">
+    <Position X="19" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>eUIdgqWdE4XZlzwuBOB1TkeXpbUfViHO/94si/5gOlU=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NoobO_Engine.SDL.SDL_Keymod" Collapsed="true">
+    <Position X="10.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAsAAAAgAAAEAAAAAAQgAAAQAAQCAAAAAAEAAAAgEA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NoobO_Engine.SDL.SDL_EventType" Collapsed="true">
+    <Position X="17.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAMgQAAAgJMAABAQIoUAAElEABQgCABAgIQAAAQAQA=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NoobO_Engine.SDL.SDL_WindowEventID" Collapsed="true">
+    <Position X="13.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAADAAAAAEAiABABAAAQAAAAAAEAAQAAEBgAAAAg=</HashCode>
+      <FileName>SDL\SDL_Event.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NoobO_Engine.SDL.BlendMode" Collapsed="true">
+    <Position X="10.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAIAAAQAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>SDL\Texture.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NoobO_Engine.SDL.Flip" Collapsed="true">
+    <Position X="12" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SDL\Texture.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

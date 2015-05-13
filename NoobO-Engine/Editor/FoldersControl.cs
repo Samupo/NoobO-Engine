@@ -42,7 +42,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _2DGameEngine.Editor
+namespace NoobO_Engine.Editor
 {
     class FolderPictureBox : PictureBox
     {

@@ -38,16 +38,16 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine.SDL
+namespace NoobO_Engine.SDL
 {
 
     [StructLayout(LayoutKind.Sequential)]
     public struct Rect
     {
-        int X;
-        int Y;
-        int Width;
-        int Height;
+        public int X;
+        public int Y;
+        public int Width;
+        public int Height;
 
         public Rect(int x, int y, int width, int height)
         {
@@ -55,6 +55,11 @@ namespace _2DGameEngine.SDL
             Y = y;
             Width = width;
             Height = height;
+        }
+
+        public override string ToString()
+        {
+            return "Rect{" + X + ", " + Y + ", " + Width + ", " + Height + "}";
         }
     }
 }

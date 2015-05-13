@@ -31,14 +31,15 @@
  *
  */
 #endregion
-using _2DGameEngine.Components;
+using NoobO_Engine.Components;
+using NoobO_Engine.SDL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2DGameEngine
+namespace NoobO_Engine
 {
     /// <summary>
     /// GameObject base class.
@@ -49,6 +50,7 @@ namespace _2DGameEngine
         /// Component list
         /// </summary>
         private LinkedList<Component> components;
+        private bool started = false;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GameObject"/> class.
@@ -56,6 +58,15 @@ namespace _2DGameEngine
         public GameObject()
         {
             components = new LinkedList<Component>();
+            GameObjectManager.AddGameObject(this);
+        }
+
+        public void DoStartRoutine()
+        {
+            if (started) return;
+            Awake();
+            Start();
+            started = true;
         }
 
         /// <summary>
@@ -116,11 +127,11 @@ namespace _2DGameEngine
         /// <summary>
         /// Renders this instance.
         /// </summary>
-        internal void Render()
+        internal void Render(Rect viewport)
         {
             foreach (Component component in components)
             {
-                component.Render();
+                component.Render(viewport);
             }
         }
 
@@ -131,6 +142,12 @@ namespace _2DGameEngine
         public void AddComponent(Component component)
         {
             components.AddLast(component);
+            component.AssignToGameObject(this);
+            if (started)
+            {
+                component.Awake();
+                component.Start();
+            }
         }
 
         /// <summary>
@@ -165,7 +182,8 @@ namespace _2DGameEngine
         /// </summary>
         public void Destroy()
         {
-
+            GameObjectManager.RemoveGameObject(this);
+            components.Clear();
         }
     }
 }

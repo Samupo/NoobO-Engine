@@ -33,7 +33,7 @@
 #endregion
 using System;
 using System.Runtime.InteropServices;
-namespace _2DGameEngine.SDL
+namespace NoobO_Engine.SDL
 {
 
     public enum BlendMode
@@ -114,7 +114,7 @@ namespace _2DGameEngine.SDL
 
         private BlendMode _blendMode = BlendMode.BLEND;
         public BlendMode BlendMode { get { return _blendMode; } set { _blendMode = value; } }
-        private Color _color = new Color();
+        private Color _color = new Color(255, 255, 255, 255);
         public Color Color { get { return _color; } set { _color = value; } }
 
         public Texture(int width, int height)
@@ -127,6 +127,14 @@ namespace _2DGameEngine.SDL
         {
             this.file = file;
             TexturePtr = TextureManager.LoadTexture(file);
+            texture = SDL_Texture.FromPointer(TexturePtr);
+        }
+
+        internal Texture(IntPtr ptr)
+        {
+            TexturePtr = SDL_CreateTextureFromSurface(Graphics.RendererPtr, ptr);
+            SDL_FreeSurface(ptr);
+            texture = SDL_Texture.FromPointer(TexturePtr);
             texture = SDL_Texture.FromPointer(TexturePtr);
         }
 
@@ -181,6 +189,12 @@ namespace _2DGameEngine.SDL
 
         [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern int SDL_RenderCopy(IntPtr renderer, IntPtr texture, ref Rect srcRect, ref Rect dstRect);
+
+        [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
+        private static extern IntPtr SDL_FreeSurface(IntPtr surface);
+
+        [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
+        private static extern IntPtr SDL_CreateTextureFromSurface(IntPtr renderer, IntPtr surface);
 
         [DllImport(SDL.NATIVELIB, CallingConvention = CallingConvention.Cdecl)]
         private static extern IntPtr SDL_CreateTexture(IntPtr renderer, UInt32 format, int access, int w, int h);
